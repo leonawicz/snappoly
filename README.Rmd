@@ -6,9 +6,8 @@ output: github_document
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-"
+  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-", eval = TRUE,
+  message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
 )
 ```
 
@@ -21,15 +20,18 @@ knitr::opts_chunk$set(
 The snappoly package is a data package in the SNAPverse collection of R packages. It contains a number of convenient `SpatialPolygonsDataFrame`
 objects sourced from shapefiles commonly used at SNAP.
 
-## Notes
+## Available maps
 
-Cleaning and curating is kept to a minimum for this package. The data sets come from various sources so they are not intended to
-share conventions regarding attribute names or other properties. However, shapefiles were reprojected as needed in order for the collection
-to share the NAD83 Alaska Albers Equal Area Conic projection in common:
+There are eight available maps in the package.
 
-`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs `
-
-The `maputils` package contains more highly processed and simplified versions of these spatial polygons data frames that are more suitable to display than analysis, e.g., for efficient use in Shiny apps.
+* `alaska`: State of Alaska
+* `canada`: Canadian provinces
+* `ecoreg`: Alaska ecological regions (ecoregions)
+* `aklcc`: Alaska Landscape Conservation Cooperative
+* `lcc`: Alaska and Canada Landscape Conservation Cooperative
+* `cavm`: Circumpolar Arctic Vegetation (Alaska)
+* `fmz`: Alaska Fire Service fire management zones
+* `tpa`: Terrestrial protected areas
 
 ## Installation
 
@@ -45,8 +47,25 @@ devtools::install_github("leonawicz/snappoly")
 Data packages in the SNAPverse can be loaded on their own, though it is more typical to load data from a data package in the context of using the `snapfuns` package, which provides a collection of functions that cater specifically to manipulating, analyzing and plotting SNAP data sets.
 This is relatively boilerplate and is mentioned for context, but for this package it is not that necessary.
 
+In the example below, the raster package is unnecessary, but it is loaded because it offers a compact print method.
+Data sets from the above list can immediately be referred to directly once snappoly is loaded.
+Following the plot, the example shows how to access documentation on the package or a data set.
+
 ```{r example}
+library(raster) # compact print method
 library(snappoly)
 canada
 plot(canada)
+?snappoly
+?tpa # help docs
 ```
+
+## Notes
+
+Cleaning and curating is kept to a minimum for this package. The data sets come from various sources so they are not intended to
+share conventions regarding attribute names or other properties. However, shapefiles were reprojected as needed in order for the collection
+to share the NAD83 Alaska Albers Equal Area Conic projection in common:
+
+`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs `
+
+The `maputils` package contains more highly processed and simplified versions of these spatial polygons data frames that are more suitable to display than analysis, e.g., for efficient use in Shiny apps.
