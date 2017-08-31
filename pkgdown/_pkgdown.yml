@@ -23,4 +23,4 @@ navbar:
   type: inverse
   right:
     - icon: fa-github fa-lg
-      href: https://github.com/leonawicz/mapmate
+      href: https://github.com/leonawicz/snappoly
