@@ -55,9 +55,25 @@ To access documentation on the package from R, use `?snappoly`, or for a data se
 library(raster) # compact print method
 library(snappoly)
 aklcc
+```
+
+```{r example2, eval = FALSE}
 clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
 plot(aklcc, col = clrs, border = NA)
 ```
+
+```{r example_run, echo = FALSE, results = "hide"}
+library(raster) # compact print method
+library(snappoly)
+clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
+dev.off()
+png("man/figures/README-example-1.png", width = 600, height = 500)
+par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
+plot(aklcc, col = clrs, border = NA, mar=c(0, 0, 0, 0))
+dev.off()
+```
+
+<p style="text-align:center;"><img src="man/figures/README-example-1.png"></p>
 
 ## Notes
 
