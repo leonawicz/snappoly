@@ -24,14 +24,14 @@ objects sourced from shapefiles commonly used at SNAP.
 
 There are eight available maps in the package.
 
-* `alaska`: State of Alaska
-* `canada`: Canadian provinces
-* `ecoreg`: Alaska ecological regions (ecoregions)
-* `aklcc`: Alaska Landscape Conservation Cooperative
-* `lcc`: Alaska and Canada Landscape Conservation Cooperative
-* `cavm`: Circumpolar Arctic Vegetation (Alaska)
-* `fmz`: Alaska Fire Service fire management zones
-* `tpa`: Terrestrial protected areas
+* `alaska`: State of Alaska.
+* `canada`: Canadian provinces.
+* `ecoreg`: Alaska ecological regions (ecoregions).
+* `aklcc`: Alaska Landscape Conservation Cooperative.
+* `lcc`: Alaska and Canada Landscape Conservation Cooperative.
+* `cavm`: Circumpolar Arctic Vegetation (Alaska).
+* `fmz`: Alaska Fire Service fire management zones.
+* `tpa`: Terrestrial protected areas.
 
 ## Installation
 

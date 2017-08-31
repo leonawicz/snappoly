@@ -37,7 +37,7 @@ NULL
 #'
 #' A vector map of Canadian provinces.
 #'
-#' @format A SpatialPolygonsDataFrame with 13 featrues. See \code{canada$NAME}.
+#' @format A SpatialPolygonsDataFrame with 13 features. See \code{canada$NAME}.
 "canada"
 
 #' Alaska ecological regions (ecoregions).
@@ -84,7 +84,7 @@ NULL
 #'
 #' A vector map of Alaskan and Canadian terrestrial protected areas.
 #' Management agencies include the Government of British Columbia, Parks Canada Agency,
-#' Government of Yukon Department of Environment, US Bureau of Land Mangement,
+#' Government of Yukon Department of Environment, US Bureau of Land Management,
 #' US Department of Defense and US Department of Energy, US Fish and Wildlife Service, US National Park Service,
 #' and Alaska state Department of Natural Resources.
 #'
