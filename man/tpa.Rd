@@ -4,7 +4,7 @@
 \name{tpa}
 \alias{tpa}
 \title{Terrestrial protected areas.}
-\format{A SpatialPolygonsDataFrame with 8 features. See the \code{MGT_AGENCY} attribute: \code{tpa@data$MGT_AGENCY}.}
+\format{A SpatialPolygonsDataFrame with 8 features. See \code{tpa$MGT_AGENCY}.}
 \usage{
 tpa
 }

@@ -4,7 +4,7 @@
 \name{cavm}
 \alias{cavm}
 \title{Circumpolar Arctic Vegetation (Alaska).}
-\format{A SpatialPolygonsDataFrame with 3 features. See the \code{Name} attribute: \code{cavm@data$Name}.}
+\format{A SpatialPolygonsDataFrame with 3 features. See \code{cavm$Name}.}
 \usage{
 cavm
 }

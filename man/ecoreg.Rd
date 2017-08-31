@@ -5,7 +5,7 @@
 \alias{ecoreg}
 \title{Alaska ecological regions (ecoregions).}
 \format{A SpatialPolygonsDataFrame with 32 features. See the \code{COMMONER}, \code{LEVEL_2}
-and \code{LEVEL_1} attributes, e.g.: \code{ecoreg@data$Level_2}.}
+and \code{LEVEL_1} attributes, e.g.: \code{ecoreg$Level_2}.}
 \usage{
 ecoreg
 }

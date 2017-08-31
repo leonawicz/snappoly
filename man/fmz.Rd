@@ -4,7 +4,7 @@
 \name{fmz}
 \alias{fmz}
 \title{Alaska Fire Service fire management zones.}
-\format{A SpatialPolygonsDataFrame with 14 features. See the \code{REGION} attribute: \code{fmz@data$REGION}.}
+\format{A SpatialPolygonsDataFrame with 14 features. See \code{fmz$REGION}.}
 \usage{
 fmz
 }

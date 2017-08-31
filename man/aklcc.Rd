@@ -4,7 +4,7 @@
 \name{aklcc}
 \alias{aklcc}
 \title{Alaska Landscape Conservation Cooperative.}
-\format{A SpatialPolygonsDataFrame with 5 features. See the \code{LCC_Name} attribute: \code{aklcc@data$LCC_Name}.}
+\format{A SpatialPolygonsDataFrame with 5 features. See \code{aklcc$LCC_Name}.}
 \usage{
 aklcc
 }
