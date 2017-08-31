@@ -1,0 +1,8 @@
+---
+title: "SNAPverse data package: snappoly"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{SNAPverse data package: snappoly}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
