@@ -49,15 +49,14 @@ This is relatively boilerplate and is mentioned for context, but for this packag
 
 In the example below, the raster package is unnecessary, but it is loaded because it offers a compact print method.
 Data sets from the above list can immediately be referred to directly once snappoly is loaded.
-Following the plot, the example shows how to access documentation on the package or a data set.
+To access documentation on the package from R, use `?snappoly`, or for a data set for example, `?fmz`.
 
 ```{r example}
 library(raster) # compact print method
 library(snappoly)
-canada
-plot(canada)
-?snappoly
-?tpa # help docs
+aklcc
+clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
+plot(aklcc, col = clrs, border = NA)
 ```
 
 ## Notes
