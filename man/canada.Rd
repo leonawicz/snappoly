@@ -4,7 +4,7 @@
 \name{canada}
 \alias{canada}
 \title{Canadian provinces.}
-\format{A SpatialPolygonsDataFrame with 13 featrues. See \code{canada$NAME}.}
+\format{A SpatialPolygonsDataFrame with 13 features. See \code{canada$NAME}.}
 \usage{
 canada
 }
