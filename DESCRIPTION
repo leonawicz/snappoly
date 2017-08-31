@@ -15,6 +15,8 @@ LazyData: true
 ByteCompile: true
 Url: https://github.com/leonawicz/snappoly
 BugReports: https://github.com/leonawicz/snappoly/issues
+Imports: 
+    sp
 Suggests: 
     testthat,
     knitr,
@@ -22,7 +24,7 @@ Suggests:
     covr,
     snapmeta,
     raster
+Remotes:
+    leonawicz/snapmeta
 VignetteBuilder: knitr
-Imports: 
-    sp
 RoxygenNote: 6.0.1
