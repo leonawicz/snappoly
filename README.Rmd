@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# snappoly
+
+[![Travis-CI Build Status](https://travis-ci.org/leonawicz/snappoly.svg?branch=master)](https://travis-ci.org/leonawicz/snappoly)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snappoly?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snappoly)
+[![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snappoly/master.svg)](https://codecov.io/github/leonawicz/snappoly?branch=master)
+  
+The snappoly package is a data package in the SNAPverse collection of R packages. It contains a number of convenient `SpatialPolygonsDataFrame`
+objects sourced from shapefiles commonly used at SNAP.
+
+## Notes
+
+Cleaning and curating is kept to a minimum for this package. The data sets come from various sources so they are not intended to
+share conventions regarding attribute names or other properties. However, shapefiles were reprojected as needed in order for the collection
+to share the NAD83 Alaska Albers Equal Area Conic projection in common:
+
+`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs `
+
+The `maputils` package contains more highly processed and simplified versions of these spatial polygons data frames that are more suitable to display than analysis, e.g., for efficient use in Shiny apps.
+
+## Installation
+
+You can install snappoly from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("leonawicz/snappoly")
+```
+
+## Usage
+
+Data packages in the SNAPverse can be loaded on their own, though it is more typical to load data from a data package in the context of using the `snapfuns` package, which provides a collection of functions that cater specifically to manipulating, analyzing and plotting SNAP data sets.
+This is relatively boilerplate and is mentioned for context, but for this package it is not that necessary.
+
+```{r example}
+library(snappoly)
+canada
+plot(canada)
+```
