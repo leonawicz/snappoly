@@ -37,7 +37,7 @@ NULL
 #'
 #' A vector map of Canadian provinces.
 #'
-#' @format A SpatialPolygonsDataFrame with 13 featrues. See the \code{NAME} attribute: \code{canada@data$NAME}.
+#' @format A SpatialPolygonsDataFrame with 13 featrues. See \code{canada$NAME}.
 "canada"
 
 #' Alaska ecological regions (ecoregions).
@@ -45,7 +45,7 @@ NULL
 #' A vector map of Alaska ecoregions.
 #'
 #' @format A SpatialPolygonsDataFrame with 32 features. See the \code{COMMONER}, \code{LEVEL_2}
-#' and \code{LEVEL_1} attributes, e.g.: \code{ecoreg@data$Level_2}.
+#' and \code{LEVEL_1} attributes, e.g.: \code{ecoreg$Level_2}.
 "ecoreg"
 
 #' Alaska Landscape Conservation Cooperative.
@@ -53,7 +53,7 @@ NULL
 #' A vector map of Alaska Landscape Conservation Cooperative areas.
 #' For further details, see \url{https://lccnetwork.org}
 #'
-#' @format A SpatialPolygonsDataFrame with 5 features. See the \code{LCC_Name} attribute: \code{aklcc@data$LCC_Name}.
+#' @format A SpatialPolygonsDataFrame with 5 features. See \code{aklcc$LCC_Name}.
 "aklcc"
 
 #' Alaska and Canada Landscape Conservation Cooperative.
@@ -61,7 +61,7 @@ NULL
 #' A vector map of Alaska and Canada Landscape Conservation Cooperative.
 #' For further details, see \url{https://lccnetwork.org}
 #'
-#' @format A SpatialPolygonsDataFrame with 5 features. See the \code{LCC_Name} attribute: \code{lcc@data$LCC_Name}.
+#' @format A SpatialPolygonsDataFrame with 5 features. See \code{lcc$LCC_Name}.
 "lcc"
 
 #' Circumpolar Arctic Vegetation (Alaska).
@@ -69,7 +69,7 @@ NULL
 #' A vector map of SNAP's derived version of the Alaska region of the Circumpolar Arctic Vegetation map layer.
 #' For further details on the source data, see \url{http://www.geobotany.uaf.edu/cavm}.
 #'
-#' @format A SpatialPolygonsDataFrame with 3 features. See the \code{Name} attribute: \code{cavm@data$Name}.
+#' @format A SpatialPolygonsDataFrame with 3 features. See \code{cavm$Name}.
 "cavm"
 
 #' Alaska Fire Service fire management zones.
@@ -77,7 +77,7 @@ NULL
 #' A vector map of Alaska Fire Service fire management zones.
 #' For further details, see \url{https://afs.ak.blm.gov/fire-management/zones.php}.
 #'
-#' @format A SpatialPolygonsDataFrame with 14 features. See the \code{REGION} attribute: \code{fmz@data$REGION}.
+#' @format A SpatialPolygonsDataFrame with 14 features. See \code{fmz$REGION}.
 "fmz"
 
 #' Terrestrial protected areas.
@@ -88,5 +88,5 @@ NULL
 #' US Department of Defense and US Department of Energy, US Fish and Wildlife Service, US National Park Service,
 #' and Alaska state Department of Natural Resources.
 #'
-#' @format A SpatialPolygonsDataFrame with 8 features. See the \code{MGT_AGENCY} attribute: \code{tpa@data$MGT_AGENCY}.
+#' @format A SpatialPolygonsDataFrame with 8 features. See \code{tpa$MGT_AGENCY}.
 "tpa"
