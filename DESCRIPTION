@@ -19,7 +19,8 @@ Suggests:
     knitr,
     rmarkdown,
     covr,
-    snapmeta
+    snapmeta,
+    raster
 VignetteBuilder: knitr
 Imports: 
     sp
