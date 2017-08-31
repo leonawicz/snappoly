@@ -4,6 +4,21 @@ template:
   params:
     bootswatch: sandstone
 
+reference:
+- title: Package
+  contents:
+  - snappoly
+- title: Data sets
+  contents:
+  - alaska
+  - canada
+  - ecoreg
+  - aklcc
+  - lcc
+  - cavm
+  - fmz
+  - tpa
+
 navbar:
   type: inverse
   right:
