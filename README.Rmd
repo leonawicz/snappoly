@@ -75,6 +75,7 @@ dev.off()
 
 <p style="text-align:center;"><img src="man/figures/README-example-1.png"></p>
 
+
 ## Notes
 
 Cleaning and curating is kept to a minimum for this package. The data sets come from various sources so they are not intended to
