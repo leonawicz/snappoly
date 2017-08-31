@@ -50,12 +50,16 @@ aklcc
 #> names       :           LCC_Name,    Acres_, Shape_Leng, Shape_Le_1,   Shape_Area, Unit.ID 
 #> min values  :         Arctic LCC,  93457602,   11965337,   11941320, 1.353159e+12,       1 
 #> max values  : Western Alaska LCC, 728185322,  133482546,  133482546, 3.782110e+11,       5
+```
+
+``` r
 clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
 plot(aklcc, col = clrs, border = NA)
 ```
 
-![](man/figures/README-example-1.png)
-
+<p style="text-align:center;">
+<img src="man/figures/README-example-1.png">
+</p>
 Notes
 -----
 
