@@ -10,4 +10,4 @@ purrr::walk2(ids, files, ~assign(.x, shapefile(.y), envir = .GlobalEnv))
 ecoreg <- spTransform(ecoreg, CRS(projection(alaska)))
 aklcc <- spTransform(aklcc, CRS(projection(alaska)))
 purrr::map(ids, ~(projection(get(.x)) == projection(alaska))) # check all AK Albers
-usethis::use_data(alaska, canada, ecoreg, aklcc, lcc, cavm, fmz, tpa)
+usethis::use_data(alaska, canada, ecoreg, aklcc, lcc, cavm, fmz, tpa, compress="xz")
