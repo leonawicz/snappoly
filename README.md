@@ -27,7 +27,7 @@ Installation
 You can install snappoly from github with:
 
 ``` r
-# install.packages('devtools')
+# install.packages("devtools")
 devtools::install_github("leonawicz/snappoly")
 ```
 
@@ -39,7 +39,7 @@ Data packages in the SNAPverse can be loaded on their own, though it is more typ
 In the example below, the raster package is unnecessary, but it is loaded because it offers a compact print method. Data sets from the above list can immediately be referred to directly once snappoly is loaded. To access documentation on the package from R, use `?snappoly`, or for a data set for example, `?fmz`.
 
 ``` r
-library(raster)  # compact print method
+library(raster) # compact print method
 library(snappoly)
 aklcc
 #> class       : SpatialPolygonsDataFrame 
