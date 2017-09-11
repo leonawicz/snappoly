@@ -6,7 +6,7 @@ output: github_document
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-", eval = TRUE,
+  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-",
   message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
 )
 ```
@@ -22,7 +22,7 @@ objects sourced from shapefiles commonly used at SNAP.
 
 ## Available maps
 
-There are eight available maps in the package.
+There are eight available maps in the package:
 
 * `alaska`: State of Alaska.
 * `canada`: Canadian provinces.
@@ -69,7 +69,7 @@ clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
 dev.off()
 png("man/figures/README-example-1.png", width = 600, height = 500)
 par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
-plot(aklcc, col = clrs, border = NA, mar=c(0, 0, 0, 0))
+plot(aklcc, col = clrs, border = NA)
 dev.off()
 ```
 
@@ -82,6 +82,6 @@ Cleaning and curating is kept to a minimum for this package. The data sets come 
 share conventions regarding attribute names or other properties. However, shapefiles were reprojected as needed in order for the collection
 to share the NAD83 Alaska Albers Equal Area Conic projection in common:
 
-`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs `
+`+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs`
 
 The `maputils` package contains more highly processed and simplified versions of these spatial polygons data frames that are more suitable to display than analysis, e.g., for efficient use in Shiny apps.
