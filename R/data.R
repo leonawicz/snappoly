@@ -21,7 +21,6 @@
 #' \item{\code{tpa}}{Terrestrial protected areas}
 #' }
 #'
-#'
 #' @docType package
 #' @name snappoly
 NULL
