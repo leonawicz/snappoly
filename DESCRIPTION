@@ -1,5 +1,5 @@
 Package: snappoly
-Version: 0.1.0
+Version: 0.2.0
 Title: Common SNAP Geographic Polygon Units
 Description: The snappoly package is a data package in the SNAPverse collection of R packages.
     It provides several geographic polygons data sets as SpatialPolygonsDataFrame objects.
@@ -16,7 +16,9 @@ ByteCompile: true
 Url: https://github.com/leonawicz/snappoly
 BugReports: https://github.com/leonawicz/snappoly/issues
 Imports: 
-    sp
+    sp,
+    tibble,
+    purrr
 Suggests: 
     testthat,
     knitr,
