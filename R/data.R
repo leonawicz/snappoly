@@ -89,3 +89,33 @@ NULL
 #'
 #' @format A SpatialPolygonsDataFrame with 8 features. See \code{tpa$MGT_AGENCY}.
 "tpa"
+
+#' Basic metadata for all data sets in snappoly
+#'
+#' This function returns a data frame with basic meta data for all data sets in \code{snappoly}.
+#' This includes data object names, spatial domain, number of features, number of variables, ID column name,
+#' whether or not the SpatialPolygonsDataFrame has multilevel/overlapping features, and a short description.
+#'
+#' @return a data frame.
+#' @export
+#'
+#' @examples
+#' snappolys()
+snappolys <- function(){
+  objects <- c("alaska", "canada", "ecoreg", "aklcc", "lcc", "cavm", "fmz", "tpa")
+  id <- c(NA, "NAME", "COMMONER", rep("LCC_Name", 2), "Name", "REGION", "MGT_AGENCY")
+  dom <- c("ak", "akcan")[c(1, 2, 1, 1, 2, 1, 1, 2)]
+  dims <- purrr::map(objects, ~dim(get(.x)))
+  feat <- purrr::map_int(dims, ~.x[1])
+  vars <- purrr::map_int(dims, ~.x[2])
+  multi <- c(rep(FALSE, 2), TRUE, rep(FALSE, 2), TRUE, rep(FALSE, 2))
+  desc <- c(rep("Domain mask", 2), "Alaska ecological regions (levels 1 - 3)",
+            "Landscape Conservation Cooperative (Alaska)",
+            "Landscape Conservation Cooperative (AK/Can)",
+            "Alaska circumpolar artic vegetation",
+            "Alaska Fire Service fire management zones",
+            "Alaska/Canada terrestrial protected areas"
+            )
+  tibble::data_frame(data = objects, domain = dom, features = feat, variables = vars,
+                     id = id, multilevel = multi, description = desc)
+}
