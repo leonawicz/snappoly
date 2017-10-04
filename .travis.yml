@@ -6,6 +6,7 @@ cache: packages
 
 r_github_packages:
  - leonawicz/snapmeta
+ - leonawicz/snapgrid
 
 after_success:
   - Rscript -e 'covr::codecov()'
