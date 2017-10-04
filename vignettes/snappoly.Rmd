@@ -70,7 +70,7 @@ In addition to `extent`, the functions `xmin`, `xmax`, `ymin` and `ymax` are ava
 
 If you want to rasterize polygons from `snappoly` it can be as simple as rasterizing a map using its own extent.
 
-```{r example_run, echo=FALSE, results="hide", cache=TRUE}
+```{r rasterize, echo=FALSE, results="hide", cache=TRUE}
 e <- extent(aklcc)
 r <- rasterize(aklcc, raster(ext = e))
 r
