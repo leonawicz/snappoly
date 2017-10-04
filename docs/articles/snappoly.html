@@ -173,11 +173,83 @@
     
     
 <div class="contents">
-
+<div id="available-maps" class="section level2">
+<h2 class="hasAnchor">
+<a href="#available-maps" class="anchor"></a>Available maps</h2>
+<p>While <code>snappoly</code> is a data package, it does contain one helper function that prints out a simply summary of all the available data sets in the package along with some basic metadata. If you are new to the package or just need a quick reminder of what data you were using previously, this is a convenient way to get started.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(snappoly)
+<span class="kw"><a href="../reference/snappolys.html">snappolys</a></span>()
+<span class="co">#&gt; # A tibble: 8 x 7</span>
+<span class="co">#&gt;     data domain features variables         id multilevel</span>
+<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;int&gt;     &lt;int&gt;      &lt;chr&gt;      &lt;lgl&gt;</span>
+<span class="co">#&gt; 1 alaska     ak        1         2       &lt;NA&gt;      FALSE</span>
+<span class="co">#&gt; 2 canada  akcan       13         5       NAME      FALSE</span>
+<span class="co">#&gt; 3 ecoreg     ak       32         8   COMMONER       TRUE</span>
+<span class="co">#&gt; 4  aklcc     ak        5         6   LCC_Name      FALSE</span>
+<span class="co">#&gt; 5    lcc  akcan        5         3   LCC_Name      FALSE</span>
+<span class="co">#&gt; 6   cavm     ak        3         4       Name       TRUE</span>
+<span class="co">#&gt; 7    fmz     ak       14         5     REGION      FALSE</span>
+<span class="co">#&gt; 8    tpa  akcan        8         5 MGT_AGENCY      FALSE</span>
+<span class="co">#&gt; # ... with 1 more variables: description &lt;chr&gt;</span></code></pre></div>
+</div>
+<div id="print-summary" class="section level2">
+<h2 class="hasAnchor">
+<a href="#print-summary" class="anchor"></a>Print summary</h2>
+<p>Load the <code>raster</code> package, which provides a compact print function for the <code>SpatialPolygonsDataFrame</code> objects in <code>snappoly</code>. Here is the Alaska LCC domain map.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(raster)
+aklcc
+<span class="co">#&gt; class       : SpatialPolygonsDataFrame </span>
+<span class="co">#&gt; features    : 5 </span>
+<span class="co">#&gt; extent      : -738286.4, 1491802, 517942.6, 2378458  (xmin, xmax, ymin, ymax)</span>
+<span class="co">#&gt; coord. ref. : +proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs +ellps=GRS80 +towgs84=0,0,0 </span>
+<span class="co">#&gt; variables   : 6</span>
+<span class="co">#&gt; names       :           LCC_Name,    Acres_, Shape_Leng, Shape_Le_1,   Shape_Area, Unit.ID </span>
+<span class="co">#&gt; min values  :         Arctic LCC,  93457602,   11965337,   11941320, 1.353159e+12,       1 </span>
+<span class="co">#&gt; max values  : Western Alaska LCC, 728185322,  133482546,  133482546, 3.782110e+11,       5</span></code></pre></div>
+<p>To access documentation on this data set, use <code>help(aklcc)</code> or the alias <code><a href="../reference/aklcc.html">?aklcc</a></code>.</p>
+</div>
+<div id="plot" class="section level2">
+<h2 class="hasAnchor">
+<a href="#plot" class="anchor"></a>Plot</h2>
+<p>TO create a basic plot, coloring in different polygons, it is not necessary to explicitly load any additional packages.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">clrs &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"#FC8D62"</span>, <span class="st">"#8DA0CB"</span>, <span class="st">"#E78AC3"</span>, <span class="st">"#A6D854"</span>, <span class="st">"#FFD92F"</span>)
+<span class="kw">plot</span>(aklcc, <span class="dt">col =</span> clrs, <span class="dt">border =</span> <span class="ot">NA</span>)</code></pre></div>
+<p style="text-align:center;">
+<img src="README-example-1b.png"></p>
+</div>
+<div id="additional-information" class="section level2">
+<h2 class="hasAnchor">
+<a href="#additional-information" class="anchor"></a>Additional information</h2>
+<p>While the raster package is loaded, use some other functions on the Alaska LCC data set.</p>
+<p>In addition to <code>extent</code>, the functions <code>xmin</code>, <code>xmax</code>, <code>ymin</code> and <code>ymax</code> are available for individual boundary values. The Alaska Albers equal area conic projection is shared across all data sets in <code>snappoly</code>. This is also consistent with data sets in the <code>snapgrid</code> package.</p>
+</div>
+<div id="rasterize-polygons" class="section level2">
+<h2 class="hasAnchor">
+<a href="#rasterize-polygons" class="anchor"></a>Rasterize polygons</h2>
+<p>If you want to rasterize polygons from <code>snappoly</code> it can be as simple as rasterizing a map using its own extent.</p>
+<p>You will likely want to provide additional arguments to <code>raster</code> than just the extent, such as <code>nrows</code> and <code>ncols</code>, or <code>resolution</code>. Otherwise the resulting raster will default to 180 rows by 360 columns with interpolated x and y cell resolutions. Another option is to rasterize polygons from <code>snappoly</code> based on a raster layer from the <code>snapgrid</code> package if you want to work with them together in the same format. For example, rasterize the AK LCC polygons using the Alaska ALFRESCO spatial flammability domain, as utilized by the JFSP project and others. Then mask to this domain.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(snapgrid)
+r &lt;-<span class="st"> </span><span class="kw">mask</span>(<span class="kw">rasterize</span>(aklcc, swflam), swflam)
+<span class="kw">plot</span>(r, <span class="dt">col =</span> clrs)</code></pre></div>
+<p style="text-align:center;">
+<img src="README-plot_rasterize-1.png"></p>
+<p>For a similar introduction to <code>snapgrid</code>, see the corresponding <a href="http://leonawicz.github.io/snapgrid/docs/articles/snappoly.html">vignette</a> to get started.</p>
+</div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+        <div id="tocnav">
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+<li><a href="#available-maps">Available maps</a></li>
+      <li><a href="#print-summary">Print summary</a></li>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#additional-information">Additional information</a></li>
+      <li><a href="#rasterize-polygons">Rasterize polygons</a></li>
+      </ul>
+</div>
       </div>
 
 </div>
