@@ -78,6 +78,14 @@ r
 You will likely want to provide additional arguments to `raster` than just the extent, such as `nrows` and `ncols`, or `resolution`. Otherwise the resulting raster will default to 180 rows by 360 columns with interpolated x and y cell resolutions.
 Another option is to rasterize polygons from `snappoly` based on a raster layer from the `snapgrid` package if you want to work with them together in the same format. For example, rasterize the AK LCC polygons using the Alaska ALFRESCO spatial flammability domain, as utilized by the JFSP project and others. Then mask to this domain.
 
+```{r rasterize_pkg, echo=FALSE}
+library(snapgrid)
+```
+
+```{r rasterize_mask, echo=FALSE, cache=TRUE}
+r <- mask(rasterize(aklcc, swflam), swflam)
+```
+
 ```{r plot_rasterize_run, echo=FALSE, results="hide"}
 dev.off()
 png("README-plot_rasterize-1.png", width = 600, height = 500)
@@ -86,9 +94,9 @@ plot(r, col = clrs)
 dev.off()
 ```
 
-```{r plot_rasterize, cache=TRUE}
+```{r plot_rasterize, eval=FALSE}
 library(snapgrid)
-r <- rasterize(aklcc, swflam) %>% mask(swflam)
+r <- mask(rasterize(aklcc, swflam), swflam)
 plot(r, col = clrs)
 ```
 
