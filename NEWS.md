@@ -1,3 +1,7 @@
+# snappoly 0.3.0 (Release date: 2017-10-04)
+
+* Added introduction vignette with more examples exploring a data set and integrating with data from `snapgrid` package.
+
 # snappoly 0.2.0 (Release date: 2017-10-03)
 
 * Added metadata function, `snappolys`.
