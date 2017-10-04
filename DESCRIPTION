@@ -28,7 +28,7 @@ Suggests:
     snapgrid,
     raster
 Remotes:
-    leonawicz/snapmeta
+    leonawicz/snapmeta,
     leonawicz/snapgrid
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1

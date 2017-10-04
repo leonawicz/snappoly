@@ -3,11 +3,6 @@
 language: R
 sudo: false
 cache: packages
-addons:
-  apt:
-    packages:
-      - libgdal-dev
-      - libproj-dev
 
 r_github_packages:
  - leonawicz/snapmeta
