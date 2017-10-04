@@ -102,4 +102,4 @@ plot(r, col = clrs)
 
 <p style="text-align:center;"><img src="README-plot_rasterize-1.png"></p>
 
-For a similar introduction to `snapgrid`, see the corresponding [vignette](http://leonawicz.github.io/snapgrid/docs/articles/snappoly.html) to get started.
+The `snapgrid` package is also recommended. Data sets included there are not duplicated in vectorized form here. These two packages compliment one another and each offers data sets that are most commonly utilized at SNAP in the respective vector or raster format. For a similar introduction to `snapgrid`, see the corresponding [vignette](http://leonawicz.github.io/snapgrid/docs/articles/snapgrid.html) to get started.
