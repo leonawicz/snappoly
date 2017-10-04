@@ -9,8 +9,7 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE, comment = "#>", fig.path = "man/figures/README-",
-  message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
+  collapse = TRUE, comment = "#>", message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
 )
 ```
 
@@ -47,13 +46,13 @@ plot(aklcc, col = clrs, border = NA)
 ```{r plot_run, echo=FALSE, results="hide"}
 clrs <- c("#FC8D62", "#8DA0CB", "#E78AC3", "#A6D854", "#FFD92F")
 dev.off()
-png("man/figures/README-example-1.png", width = 600, height = 500)
+png("README-example-1b.png", width = 600, height = 500)
 par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
 plot(aklcc, col = clrs, border = NA)
 dev.off()
 ```
 
-<p style="text-align:center;"><img src="man/figures/README-example-1.png"></p>
+<p style="text-align:center;"><img src="README-example-1b.png"></p>
 
 ## Additional information
 
@@ -81,23 +80,18 @@ Another option is to rasterize polygons from `snappoly` based on a raster layer 
 
 ```{r plot_rasterize_run, echo=FALSE, results="hide"}
 dev.off()
-png("man/figures/README-plot_rasterize-1.png", width = 600, height = 500)
-par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
+png("README-plot_rasterize-1.png", width = 600, height = 500)
+#par(mar = c(0, 0, 0, 0), xaxs = "i", xpd = FALSE, yaxs = "i")
 plot(r, col = clrs)
 dev.off()
 ```
 
-```{r plot_rasterize_pkg, echo=FALSE}
+```{r plot_rasterize, cache=TRUE}
 library(snapgrid)
-```
-
-```{r plot_rasterize, eval=FALSE, cache=TRUE}
-library(snapgrid)
-e <- extent(aklcc)
 r <- rasterize(aklcc, swflam) %>% mask(swflam)
 plot(r, col = clrs)
 ```
 
-<p style="text-align:center;"><img src="man/figures/README-plot_rasterize-1.png"></p>
+<p style="text-align:center;"><img src="README-plot_rasterize-1.png"></p>
 
 For a similar introduction to `snapgrid`, see the corresponding [vignette](http://leonawicz.github.io/snapgrid/docs/articles/snappoly.html) to get started.
