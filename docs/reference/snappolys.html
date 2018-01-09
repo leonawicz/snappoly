@@ -64,7 +64,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -110,7 +110,7 @@
     <li class="divider"></li>
     <li class="dropdown-header">Functions packages</li>
     <li>
-      <a href="https://leonawicz.github.io/snapfuns">snapfuns</a>
+      <a href="https://leonawicz.github.io/snapstat">snapstat</a>
     </li>
     <li>
       <a href="https://leonawicz.github.io/snaplocs">snaplocs</a>
@@ -209,17 +209,16 @@ whether or not the SpatialPolygonsDataFrame has multilevel/overlapping features,
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>snappolys</span>()</div><div class='output co'>#&gt; # A tibble: 8 x 7
-#&gt;     data domain features variables         id multilevel
-#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;int&gt;     &lt;int&gt;      &lt;chr&gt;      &lt;lgl&gt;
-#&gt; 1 alaska     ak        1         2       &lt;NA&gt;      FALSE
-#&gt; 2 canada  akcan       13         5       NAME      FALSE
-#&gt; 3 ecoreg     ak       32         8   COMMONER       TRUE
-#&gt; 4  aklcc     ak        5         6   LCC_Name      FALSE
-#&gt; 5    lcc  akcan        5         3   LCC_Name      FALSE
-#&gt; 6   cavm     ak        3         4       Name       TRUE
-#&gt; 7    fmz     ak       14         5     REGION      FALSE
-#&gt; 8    tpa  akcan        8         5 MGT_AGENCY      FALSE
-#&gt; # ... with 1 more variables: description &lt;chr&gt;</div></pre>
+#&gt;   data   domain features variables id         multilevel description           
+#&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt;     &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;      &lt;chr&gt;                 
+#&gt; 1 alaska ak            1         2 &lt;NA&gt;       F          Domain mask           
+#&gt; 2 canada akcan        13         5 NAME       F          Domain mask           
+#&gt; 3 ecoreg ak           32         8 COMMONER   T          Alaska ecological reg~
+#&gt; 4 aklcc  ak            5         6 LCC_Name   F          Landscape Conservatio~
+#&gt; 5 lcc    akcan         5         3 LCC_Name   F          Landscape Conservatio~
+#&gt; 6 cavm   ak            3         4 Name       T          Alaska circumpolar ar~
+#&gt; 7 fmz    ak           14         5 REGION     F          Alaska Fire Service f~
+#&gt; 8 tpa    akcan         8         5 MGT_AGENCY F          Alaska/Canada terrest~</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

@@ -39,7 +39,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -84,7 +84,7 @@
     <li class="divider">
     <li class="dropdown-header">Functions packages</li>
     <li>
-      <a href="https://leonawicz.github.io/snapfuns">snapfuns</a>
+      <a href="https://leonawicz.github.io/snapstat">snapstat</a>
     </li>
     <li>
       <a href="https://leonawicz.github.io/snaplocs">snaplocs</a>
@@ -180,17 +180,16 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(snappoly)
 <span class="kw"><a href="../reference/snappolys.html">snappolys</a></span>()
 <span class="co">#&gt; # A tibble: 8 x 7</span>
-<span class="co">#&gt;     data domain features variables         id multilevel</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;int&gt;     &lt;int&gt;      &lt;chr&gt;      &lt;lgl&gt;</span>
-<span class="co">#&gt; 1 alaska     ak        1         2       &lt;NA&gt;      FALSE</span>
-<span class="co">#&gt; 2 canada  akcan       13         5       NAME      FALSE</span>
-<span class="co">#&gt; 3 ecoreg     ak       32         8   COMMONER       TRUE</span>
-<span class="co">#&gt; 4  aklcc     ak        5         6   LCC_Name      FALSE</span>
-<span class="co">#&gt; 5    lcc  akcan        5         3   LCC_Name      FALSE</span>
-<span class="co">#&gt; 6   cavm     ak        3         4       Name       TRUE</span>
-<span class="co">#&gt; 7    fmz     ak       14         5     REGION      FALSE</span>
-<span class="co">#&gt; 8    tpa  akcan        8         5 MGT_AGENCY      FALSE</span>
-<span class="co">#&gt; # ... with 1 more variables: description &lt;chr&gt;</span></code></pre></div>
+<span class="co">#&gt;   data   domain features variables id         multilevel description      </span>
+<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt;     &lt;int&gt; &lt;chr&gt;      &lt;lgl&gt;      &lt;chr&gt;            </span>
+<span class="co">#&gt; 1 alaska ak            1         2 &lt;NA&gt;       F          Domain mask      </span>
+<span class="co">#&gt; 2 canada akcan        13         5 NAME       F          Domain mask      </span>
+<span class="co">#&gt; 3 ecoreg ak           32         8 COMMONER   T          Alaska ecologica~</span>
+<span class="co">#&gt; 4 aklcc  ak            5         6 LCC_Name   F          Landscape Conser~</span>
+<span class="co">#&gt; 5 lcc    akcan         5         3 LCC_Name   F          Landscape Conser~</span>
+<span class="co">#&gt; 6 cavm   ak            3         4 Name       T          Alaska circumpol~</span>
+<span class="co">#&gt; 7 fmz    ak           14         5 REGION     F          Alaska Fire Serv~</span>
+<span class="co">#&gt; 8 tpa    akcan         8         5 MGT_AGENCY F          Alaska/Canada te~</span></code></pre></div>
 </div>
 <div id="print-summary" class="section level2">
 <h2 class="hasAnchor">

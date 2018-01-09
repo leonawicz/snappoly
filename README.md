@@ -34,7 +34,7 @@ devtools::install_github("leonawicz/snappoly")
 Usage
 -----
 
-Data packages in the SNAPverse can be loaded on their own, though it is more typical to load data from a data package in the context of using the `snapfuns` package, which provides a collection of functions that cater specifically to manipulating, analyzing and plotting SNAP data sets. This is relatively boilerplate and is mentioned for context, but for this package it is not that necessary.
+Data packages in the SNAPverse can be loaded on their own, though it is more typical to load data from a data package in the context of using the `snapstat` package, which provides a collection of functions that cater specifically to manipulating, analyzing and plotting SNAP data sets. This is relatively boilerplate and is mentioned for context, but for this package it is not that necessary.
 
 In the example below, the raster package is unnecessary, but it is loaded because it offers a compact print method. Data sets from the above list can immediately be referred to directly once snappoly is loaded. To access documentation on the package from R, use `?snappoly`, or for a data set for example, `?fmz`.
 
