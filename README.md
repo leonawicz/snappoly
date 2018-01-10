@@ -5,7 +5,7 @@ snappoly
 
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snappoly.svg?branch=master)](https://travis-ci.org/leonawicz/snappoly) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snappoly?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snappoly) [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snappoly/master.svg)](https://codecov.io/github/leonawicz/snappoly?branch=master)
 
-The snappoly package is a data package in the SNAPverse collection of R packages. It contains a number of convenient `SpatialPolygonsDataFrame` objects sourced from shapefiles commonly used at SNAP.
+The snappoly package is a data package in the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. It contains a number of convenient `SpatialPolygonsDataFrame` objects sourced from shapefiles commonly used at SNAP.
 
 Available maps
 --------------
@@ -68,3 +68,8 @@ Cleaning and curating is kept to a minimum for this package. The data sets come 
 `+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs`
 
 The `maputils` package contains more highly processed and simplified versions of these spatial polygons data frames that are more suitable to display than analysis, e.g., for efficient use in Shiny apps.
+
+Reference
+---------
+
+[Complete package reference and function documentation](https://leonawicz.github.io/snappoly/)
