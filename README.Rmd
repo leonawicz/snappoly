@@ -16,7 +16,11 @@ knitr::opts_chunk$set(
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snappoly.svg?branch=master)](https://travis-ci.org/leonawicz/snappoly)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snappoly?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snappoly)
 [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snappoly/master.svg)](https://codecov.io/github/leonawicz/snappoly?branch=master)
-  
+
+## SNAPverse R package ecosystem development frozen.
+
+*Development of the SNAPverse R package ecosystem has been frozen indefinitely. This project was never directly funded. I began it out of personal interest, but no longer work for SNAP. It will remain archived here for historical reference.*
+
 The snappoly package is a data package in the [SNAPverse](https://leonawicz.github.io/snapverse/) collection of R packages. It contains a number of convenient `SpatialPolygonsDataFrame`
 objects sourced from shapefiles commonly used at SNAP.
 
